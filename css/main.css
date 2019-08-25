@@ -51,9 +51,45 @@ body p {
   object-fit: cover;
 }
 
+#information {
+  background: #374F95;
+  color: #fff;
+}
+#information h4, #information p {
+  margin: 0;
+}
+#information h4 {
+  font-size: 30px;
+  font-family: "Catamaran", sans-serif;
+}
+#information p {
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+
+@media (max-width: 800px) {
+  #information {
+    text-align: center;
+    padding: 20px;
+  }
+  #information .child {
+    padding: 30px 0;
+  }
+}
+@media (min-width: 800px) {
+  #information {
+    display: flex;
+    padding: 40px 10px;
+  }
+  #information .child {
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+  }
+}
 #about {
-  margin: 80px 0;
-  padding: 50px 0;
+  margin-top: 80px;
+  padding-top: 50px;
 }
 #about .wrapper {
   display: flex;
@@ -76,7 +112,7 @@ body p {
   }
   #about .wrapper .image img {
     height: 300px;
-    margin: 50px auto;
+    margin: 50px auto 30px;
   }
 }
 @media (min-width: 769px) {
@@ -85,6 +121,7 @@ body p {
   }
   #about .wrapper .desc {
     margin: 50px 0;
+    float: right;
   }
   #about .wrapper .desc h3, #about .wrapper .desc p {
     padding-left: 10%;
@@ -102,8 +139,8 @@ body p {
   }
 }
 #services {
-  margin: 80px 0;
-  padding: 50px 0;
+  margin-top: 80px;
+  padding-top: 50px;
 }
 #services h3 {
   text-align: center;
@@ -132,8 +169,8 @@ body p {
 }
 
 #blog {
-  margin: 80px 0;
-  padding: 50px 0;
+  margin-top: 80px;
+  padding-top: 50px;
 }
 #blog h3 {
   text-align: center;
@@ -141,7 +178,7 @@ body p {
 
 #contact {
   margin: 80px 0;
-  padding: 50px 0;
+  padding-top: 50px;
 }
 #contact .info {
   text-align: center;
@@ -224,12 +261,12 @@ body p {
   }
   #contact .container .box #map {
     height: 350px;
-    margin: 60px 8%;
+    margin: 40px 8%;
   }
 }
 @media only screen and (min-width: 769px) {
   #contact .info {
-    margin-bottom: 80px;
+    margin-bottom: 70px;
   }
   #contact .container .content, #contact .container .box {
     width: 50%;

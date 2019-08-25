@@ -65,10 +65,53 @@ body {
   }
 }
 
+#information {
+  background: $blue;
+  color: #fff;
+
+  h4, p {
+    margin: 0;
+  }
+
+  h4 {
+    font-size: 30px;
+    font-family: $header;
+  }
+
+  p {
+    font-size: 20px;
+    font-family: $paragraph;
+  }
+}
+
+@media (max-width:800px) {
+  #information {
+    text-align: center;
+    padding: 20px;
+
+    .child {
+      padding: 30px 0;
+    }
+  }
+}
+
+@media (min-width:800px) {
+  #information {
+    display: flex;
+    padding: 40px 10px;
+
+    .child {
+      width: 25%;
+      text-align: center;
+      padding: 20px;
+    }
+  }
+}
+
 
 #about {
-  margin: 80px 0;
-  padding: 50px 0;
+  margin-top: 80px;
+  padding-top: 50px;
 
   .wrapper {
     display: flex;
@@ -104,7 +147,7 @@ body {
       .image {
         img {
           height: 300px;
-          margin: 50px auto;
+          margin: 50px auto 30px;
         }
       }
     }
@@ -120,6 +163,7 @@ body {
 
       .desc {
         margin: 50px 0;
+        float: right;
 
         h3, p {
           padding-left: 10%;
@@ -144,8 +188,8 @@ body {
 
 
 #services {
-  margin: 80px 0;
-  padding: 50px 0;
+  margin-top: 80px;
+  padding-top: 50px;
 
   h3 {
     text-align: center;
@@ -179,8 +223,8 @@ body {
 }
 
 #blog {
-  margin: 80px 0;
-  padding: 50px 0;
+  margin-top: 80px;
+  padding-top: 50px;
 
   h3 {
     text-align: center;
@@ -190,7 +234,7 @@ body {
 
 #contact {
   margin: 80px 0;
-  padding: 50px 0;
+  padding-top: 50px;
 
   .info {
     text-align: center;
@@ -293,7 +337,7 @@ body {
       .box {
         #map {
           height: 350px;
-          margin: 60px 8%;
+          margin: 40px 8%;
         }
       }
     }
@@ -303,7 +347,7 @@ body {
 @media only screen and (min-width:769px) {
   #contact {
     .info {
-      margin-bottom: 80px;
+      margin-bottom: 70px;
     }
 
     .container {
