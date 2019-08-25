@@ -65,6 +65,50 @@ body {
   }
 }
 
+
+#tracking {
+  text-align: center;
+
+  h3 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: $paragraph;
+    font-size: 20px;
+    margin: 0;
+    padding-bottom: 40px;
+  }
+
+  a {
+    background: $blue;
+    padding: 10px 50px;
+    text-decoration: none;
+    color: #fff;
+    font-family: $header;
+    font-size: 20px;
+
+    &:hover {
+      background: #fff;
+      color: #000;
+      border: 1px solid #000;
+    }
+  }
+}
+
+@media (max-width:425px) {
+  #tracking {
+    padding: 70% 20px;
+  }
+}
+
+@media (min-width:425px) {
+  #tracking {
+    padding: 20% 20px;
+  }
+}
+
+
 #information {
   background: $blue;
   color: #fff;
@@ -204,31 +248,6 @@ body {
   #services {}
 }
 
-
-#tracking {
-  text-align: center;
-
-  h3 {
-    font-size: 40px;
-    padding: 20px;
-  }
-
-  a {
-    font-family: $header;
-    font-size: 20px;
-    background: $blue;
-    color: #fff;
-    padding: 12px 50px;
-    border: 1px solid $blue;
-    text-decoration: none;
-
-    &:hover {
-      border: 1px solid #000;
-      background: #fff;
-      color: #000;
-    }
-  }
-}
 
 #blog {
   margin-top: 70px;

@@ -51,6 +51,42 @@ body p {
   object-fit: cover;
 }
 
+#tracking {
+  text-align: center;
+}
+#tracking h3 {
+  font-size: 30px;
+}
+#tracking p {
+  font-size: "Open Sans", sans-serif;
+  font-size: 20px;
+  margin: 0;
+  padding-bottom: 40px;
+}
+#tracking a {
+  background: #374F95;
+  padding: 10px 50px;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Catamaran", sans-serif;
+  font-size: 20px;
+}
+#tracking a:hover {
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+@media (max-width: 425px) {
+  #tracking {
+    padding: 70% 20px;
+  }
+}
+@media (min-width: 425px) {
+  #tracking {
+    padding: 20% 20px;
+  }
+}
 #information {
   background: #374F95;
   color: #fff;
@@ -144,28 +180,6 @@ body p {
 }
 #services h3 {
   text-align: center;
-}
-
-#tracking {
-  text-align: center;
-}
-#tracking h3 {
-  font-size: 40px;
-  padding: 20px;
-}
-#tracking a {
-  font-family: "Catamaran", sans-serif;
-  font-size: 20px;
-  background: #374F95;
-  color: #fff;
-  padding: 12px 50px;
-  border: 1px solid #374F95;
-  text-decoration: none;
-}
-#tracking a:hover {
-  border: 1px solid #000;
-  background: #fff;
-  color: #000;
 }
 
 #blog {
