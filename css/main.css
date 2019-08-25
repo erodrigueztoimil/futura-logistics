@@ -67,7 +67,7 @@ body p {
   font-family: "Open Sans", sans-serif;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 799px) {
   #information {
     text-align: center;
     padding: 20px;
@@ -88,7 +88,7 @@ body p {
   }
 }
 #about {
-  margin-top: 80px;
+  margin-top: 70px;
   padding-top: 50px;
 }
 #about .wrapper {
@@ -139,7 +139,7 @@ body p {
   }
 }
 #services {
-  margin-top: 80px;
+  margin-top: 70px;
   padding-top: 50px;
 }
 #services h3 {
@@ -169,7 +169,7 @@ body p {
 }
 
 #blog {
-  margin-top: 80px;
+  margin-top: 70px;
   padding-top: 50px;
 }
 #blog h3 {
