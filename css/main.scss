@@ -1,0 +1,308 @@
+$paragraph: 'Open Sans', sans-serif;
+$header: 'Catamaran', sans-serif;
+
+$blue: #374F95;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  h3 {
+    font-size: 25px;
+    margin: 0;
+    font-family: $header;
+  }
+
+  p {
+    font-size: 19px;
+    margin: 0;
+    font-family: $paragraph;
+  }
+}
+
+
+
+#home {
+  height: 90%;
+  position: relative;
+
+  nav {
+    width: 50%;
+    margin: auto;
+    padding-top: 40px;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+
+      li {
+        display: inline;
+        padding: 0 5%;
+
+        a {
+          text-decoration: none;
+          color: #000;
+          font-size: 20px;
+          font-family: $paragraph;
+        }
+      }
+    }
+  }
+
+  img {
+    height: 80%;
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+  }
+}
+
+
+#about {
+  margin: 80px 0;
+  padding: 50px 0;
+
+  .wrapper {
+    display: flex;
+
+    .desc {
+      h3 {
+        padding: 10px 0;
+      }
+    }
+
+    .image {
+      img {
+        width: 80%;
+        display: block;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (max-width:768px) {
+  #about {
+    h3 {}
+    .wrapper {
+      flex-direction: column;
+
+      .desc {
+        padding: 0 13%;
+
+        p {}
+      }
+
+      .image {
+        img {
+          height: 300px;
+          margin: 50px auto;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width:769px) {
+  #about {
+    .wrapper {
+      .desc, .image {
+        width: 50%;
+      }
+
+      .desc {
+        margin: 50px 0;
+
+        h3, p {
+          padding-left: 10%;
+          padding-right: 10%;
+        }
+      }
+
+      .image {
+        position: relative;
+
+        img {
+          position: absolute;
+          height: 100%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+}
+
+
+#services {
+  padding: 100px 0;
+
+  h3 {
+    text-align: center;
+  }
+}
+
+
+#tracking {
+  text-align: center;
+
+  h3 {
+    font-size: 40px;
+    padding: 20px;
+  }
+
+  a {
+    font-family: $header;
+    font-size: 20px;
+    background: $blue;
+    color: #fff;
+    padding: 12px 50px;
+    border: 1px solid $blue;
+    text-decoration: none;
+
+    &:hover {
+      border: 1px solid #000;
+      background: #fff;
+      color: #000;
+    }
+  }
+}
+
+
+#contact {
+  margin: 80px 0;
+  padding: 50px 0;
+
+  .info {
+    margin-bottom: 100px;
+    text-align: center;
+
+    h3 {}
+  }
+
+  .container {
+    display: flex;
+
+    .box {
+      #map {}
+    }
+
+    .content {
+      margin: 60px 0;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        font-family: $paragraph;
+
+        input[type=text], input[type=email], textarea {
+          border: none;
+          border-bottom: 1px solid #000;
+          font-size: 20px;
+          margin: 10px;
+          padding: 10px 0;
+          color: #000;
+          outline: none;
+        }
+
+        textarea {
+          min-height: 180px;
+          resize: vertical;
+        }
+
+        input[type=submit] {
+          min-width: 35%;
+          max-width: 40%;
+          font-size: 20px;
+          background: #fff;
+          border: 1px solid #000;
+          padding: 12px;
+          margin: 10px;
+          outline: none;
+
+          &:hover {
+            background: $blue;
+            border: 1px solid $blue;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:768px) {
+  #contact {
+    .container {
+      flex-direction: column;
+
+      .content {
+        width: 80%;
+        max-width: 440px;
+        margin: auto;
+      }
+
+      .box {
+        #map {
+          height: 350px;
+          margin: 60px 8%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width:769px) {
+  #contact {
+    .container {
+      .content, .box {
+        width: 50%;
+      }
+
+      .content {
+        form {
+          width: 80%;
+        }
+      }
+
+      .box {
+        #map {
+          height: 100%;
+          margin-left: 15%;
+          padding-left: 10%;
+        }
+      }
+
+      .content {
+        padding-left: 7%;
+        form {}
+      }
+    }
+  }
+}
+
+
+footer {
+  background: $blue;
+  height: 120px;
+  text-align: center;
+
+  h5 {
+    font-family: $header;
+    font-size: 18px;
+    color: #fff;
+    padding-top: 50px;
+    margin: 0;
+  }
+}
