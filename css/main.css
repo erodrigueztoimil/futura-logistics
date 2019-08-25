@@ -41,7 +41,7 @@ body p {
   font-size: 20px;
   font-family: "Open Sans", sans-serif;
 }
-#home img {
+#home .box img {
   height: 80%;
   width: 90%;
   position: absolute;
@@ -51,81 +51,9 @@ body p {
   object-fit: cover;
 }
 
-#tracking {
-  text-align: center;
-}
-#tracking h3 {
-  font-size: 30px;
-}
-#tracking p {
-  font-size: "Open Sans", sans-serif;
-  font-size: 20px;
-  margin: 0;
-  padding-bottom: 40px;
-}
-#tracking a {
-  background: #374F95;
-  padding: 10px 50px;
-  text-decoration: none;
-  color: #fff;
-  font-family: "Catamaran", sans-serif;
-  font-size: 20px;
-}
-#tracking a:hover {
-  background: #fff;
-  color: #000;
-  border: 1px solid #000;
-}
-
-@media (max-width: 425px) {
-  #tracking {
-    padding: 70% 20px;
-  }
-}
-@media (min-width: 425px) {
-  #tracking {
-    padding: 20% 20px;
-  }
-}
-#information {
-  background: #374F95;
-  color: #fff;
-}
-#information h4, #information p {
-  margin: 0;
-}
-#information h4 {
-  font-size: 30px;
-  font-family: "Catamaran", sans-serif;
-}
-#information p {
-  font-size: 20px;
-  font-family: "Open Sans", sans-serif;
-}
-
-@media (max-width: 799px) {
-  #information {
-    text-align: center;
-    padding: 20px;
-  }
-  #information .child {
-    padding: 30px 0;
-  }
-}
-@media (min-width: 800px) {
-  #information {
-    display: flex;
-    padding: 40px 10px;
-  }
-  #information .child {
-    width: 25%;
-    text-align: center;
-    padding: 20px;
-  }
-}
 #about {
-  margin-top: 70px;
-  padding-top: 50px;
+  margin-bottom: 70px;
+  padding: 50px 0;
 }
 #about .wrapper {
   display: flex;
@@ -174,20 +102,95 @@ body p {
     transform: translate(-50%, -50%);
   }
 }
+#information {
+  background: #374F95;
+  color: #fff;
+}
+#information h4, #information p {
+  margin: 0;
+}
+#information h4 {
+  font-size: 30px;
+  font-family: "Catamaran", sans-serif;
+}
+#information p {
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+
+@media (max-width: 799px) {
+  #information {
+    text-align: center;
+    padding: 20px;
+  }
+  #information .child {
+    padding: 30px 0;
+  }
+}
+@media (min-width: 800px) {
+  #information {
+    display: flex;
+    padding: 40px 10px;
+  }
+  #information .child {
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+  }
+}
 #services {
   margin-top: 70px;
   padding-top: 50px;
+  height: 100vh;
 }
 #services h3 {
   text-align: center;
+}
+#services .container .row .item {
+  text-align: center;
+}
+#services .container .row .item h4 {
+  font-size: 20px;
+  font-family: "Catamaran", sans-serif;
+  margin: 0;
 }
 
 #blog {
   margin-top: 70px;
   padding-top: 50px;
+  height: 100vh;
 }
 #blog h3 {
   text-align: center;
+}
+
+#tracking {
+  text-align: center;
+  background: #374F95;
+  padding: 100px 20px;
+  color: #fff;
+}
+#tracking h3 {
+  font-size: 30px;
+}
+#tracking p {
+  font-size: "Open Sans", sans-serif;
+  font-size: 20px;
+  margin: 0;
+  padding-bottom: 40px;
+}
+#tracking a {
+  padding: 10px 50px;
+  text-decoration: none;
+  font-family: "Catamaran", sans-serif;
+  font-size: 20px;
+  background: #374F95;
+  color: #fff;
+  border: 1px solid #fff;
+}
+#tracking a:hover {
+  background: #fff;
+  color: #000;
 }
 
 #contact {
