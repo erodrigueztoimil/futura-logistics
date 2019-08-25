@@ -102,7 +102,8 @@ body p {
   }
 }
 #services {
-  padding: 100px 0;
+  margin: 80px 0;
+  padding: 50px 0;
 }
 #services h3 {
   text-align: center;
@@ -130,13 +131,40 @@ body p {
   color: #000;
 }
 
+#blog {
+  margin: 80px 0;
+  padding: 50px 0;
+}
+#blog h3 {
+  text-align: center;
+}
+
 #contact {
   margin: 80px 0;
   padding: 50px 0;
 }
 #contact .info {
-  margin-bottom: 100px;
   text-align: center;
+}
+#contact .info .desc {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+#contact .info .desc .item {
+  margin: 20px 7%;
+}
+#contact .info .desc .item h4 {
+  font-family: "Catamaran", sans-serif;
+  font-size: 20px;
+  margin: 0;
+}
+#contact .info .desc .item a {
+  font-size: 19px;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  color: #000;
+  text-decoration: none;
 }
 #contact .container {
   display: flex;
@@ -180,6 +208,12 @@ body p {
 }
 
 @media only screen and (max-width: 768px) {
+  #contact .info {
+    margin-bottom: 30px;
+  }
+  #contact .info .desc {
+    flex-direction: column;
+  }
   #contact .container {
     flex-direction: column;
   }
@@ -194,6 +228,9 @@ body p {
   }
 }
 @media only screen and (min-width: 769px) {
+  #contact .info {
+    margin-bottom: 80px;
+  }
   #contact .container .content, #contact .container .box {
     width: 50%;
   }

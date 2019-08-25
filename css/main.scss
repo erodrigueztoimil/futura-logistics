@@ -144,7 +144,8 @@ body {
 
 
 #services {
-  padding: 100px 0;
+  margin: 80px 0;
+  padding: 50px 0;
 
   h3 {
     text-align: center;
@@ -177,16 +178,45 @@ body {
   }
 }
 
+#blog {
+  margin: 80px 0;
+  padding: 50px 0;
+
+  h3 {
+    text-align: center;
+  }
+}
+
 
 #contact {
   margin: 80px 0;
   padding: 50px 0;
 
   .info {
-    margin-bottom: 100px;
     text-align: center;
 
-    h3 {}
+    .desc {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+
+      .item {
+        margin: 20px 7%;
+        h4 {
+          font-family: $header;
+          font-size: 20px;
+          margin: 0;
+        }
+
+        a {
+          font-size: 19px;
+          margin: 0;
+          font-family: $paragraph;
+          color: #000;
+          text-decoration: none;
+        }
+      }
+    }
   }
 
   .container {
@@ -244,6 +274,13 @@ body {
 
 @media only screen and (max-width:768px) {
   #contact {
+    .info {
+      margin-bottom: 30px;
+      .desc {
+        flex-direction: column;
+      }
+    }
+
     .container {
       flex-direction: column;
 
@@ -265,6 +302,10 @@ body {
 
 @media only screen and (min-width:769px) {
   #contact {
+    .info {
+      margin-bottom: 80px;
+    }
+
     .container {
       .content, .box {
         width: 50%;
