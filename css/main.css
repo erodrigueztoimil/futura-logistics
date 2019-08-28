@@ -25,7 +25,7 @@ body p {
 }
 #home header {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 0.14);
 }
 #home header .container {
   height: 120px;
@@ -61,6 +61,34 @@ body p {
 }
 #home header .container nav ul li a:hover {
   text-decoration: underline;
+}
+#home .shortcut {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#home .shortcut h4 {
+  font-family: "Catamaran", sans-serif;
+  font-size: 60px;
+  color: #fff;
+  margin: 0;
+  padding-bottom: 40px;
+  font-weight: bold;
+  line-height: 60px;
+}
+#home .shortcut a {
+  padding: 15px 50px;
+  text-decoration: none;
+  font-family: "Catamaran", sans-serif;
+  font-size: 20px;
+  color: #fff;
+  border: 1px solid #fff;
+}
+#home .shortcut a:hover {
+  background: #374F95;
+  border: 1px solid #374F95;
 }
 
 #about {
@@ -276,7 +304,6 @@ body p {
   text-decoration: none;
   font-family: "Catamaran", sans-serif;
   font-size: 20px;
-  background: #374F95;
   color: #fff;
   border: 1px solid #fff;
 }

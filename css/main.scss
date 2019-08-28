@@ -34,7 +34,7 @@ body {
 
   header {
     width: 100%;
-    background-color: rgba(0,0,0, 0.4);
+    background-color: rgba(255, 255, 255, 0.14);
     // position: fixed;
     // z-index: 1;
 
@@ -81,6 +81,38 @@ body {
             }
           }
         }
+      }
+    }
+  }
+
+  .shortcut {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    h4 {
+      font-family: $header;
+      font-size: 60px;
+      color: #fff;
+      margin: 0;
+      padding-bottom: 40px;
+      font-weight: bold;
+      line-height: 60px;
+    }
+
+    a {
+      padding: 15px 50px;
+      text-decoration: none;
+      font-family: $header;
+      font-size: 20px;
+      color: #fff;
+      border: 1px solid #fff;
+
+      &:hover {
+        background: $blue;
+        border: 1px solid $blue;
       }
     }
   }
@@ -387,7 +419,6 @@ body {
     text-decoration: none;
     font-family: $header;
     font-size: 20px;
-    background: $blue;
     color: #fff;
     border: 1px solid #fff;
 
