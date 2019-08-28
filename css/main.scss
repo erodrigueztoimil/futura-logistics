@@ -28,48 +28,69 @@ body {
 #home {
   height: 100vh;
   position: relative;
+  background-image: url('../img/enrapture.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 
-  nav {
-    width: 50%;
-    margin: auto;
-    padding-top: 40px;
+  header {
+    background: #fff;
+    width: 100%;
+    // position: fixed;
+    // z-index: 1;
 
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      text-align: center;
+    .container {
+      height: 100px;
+      display: flex;
+      align-items: center;
+      padding: 0 10%;
 
-      li {
-        display: inline;
-        padding: 0 5%;
+      a {
+        color: #000;
+        text-decoration: none;
+        font-family: $header;
+        font-size: 25px;
+      }
 
-        a {
-          text-decoration: none;
-          color: #000;
-          font-size: 20px;
-          font-family: $paragraph;
+      .divider {
+        flex: 1;
+      }
+
+      .menu-toggle {}
+
+      nav {
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+          display: flex;
+
+          li {
+            display: inline;
+            padding: 0 30px;
+
+            a {
+              text-decoration: none;
+              color: #000;
+              font-size: 20px;
+              font-family: $paragraph;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
         }
       }
     }
   }
 
-  .box {
-    img {
-      height: 80%;
-      width: 90%;
-      position: absolute;
-      left: 50%;
-      top: 55%;
-      transform: translate(-50%, -50%);
-      object-fit: cover;
-    }
-  }
+
 }
 
 
 #about {
-  margin-bottom: 70px;
+  margin: 70px;
   padding: 50px 0;
 
   .wrapper {
