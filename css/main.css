@@ -21,20 +21,20 @@ body p {
   position: relative;
   background-image: url("../img/enrapture.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-position: center;
 }
 #home header {
-  background: #fff;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 #home header .container {
-  height: 100px;
+  height: 120px;
   display: flex;
   align-items: center;
-  padding: 0 10%;
+  padding: 0 5%;
 }
 #home header .container a {
-  color: #000;
+  color: #fff;
   text-decoration: none;
   font-family: "Catamaran", sans-serif;
   font-size: 25px;
@@ -51,20 +51,19 @@ body p {
 }
 #home header .container nav ul li {
   display: inline;
-  padding: 0 30px;
+  padding: 0 20px;
 }
 #home header .container nav ul li a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
   font-size: 20px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Catamaran", sans-serif;
 }
 #home header .container nav ul li a:hover {
   text-decoration: underline;
 }
 
 #about {
-  margin: 70px;
   padding: 50px 0;
 }
 #about .wrapper {
@@ -80,6 +79,9 @@ body p {
 }
 
 @media (max-width: 768px) {
+  #about {
+    margin: 50px 0;
+  }
   #about .wrapper {
     flex-direction: column;
   }
@@ -92,6 +94,9 @@ body p {
   }
 }
 @media (min-width: 769px) {
+  #about {
+    margin: 90px 0;
+  }
   #about .wrapper .desc, #about .wrapper .image {
     width: 50%;
   }
