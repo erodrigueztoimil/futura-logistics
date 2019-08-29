@@ -1,3 +1,6 @@
+console.log('Website made by Ernesto Rodriguez --- GitHub: erodrigueztoimil, Email: erodrigueztoimil@gmail.com');
+
+
 // Initialize and add the map
 function initMap() {
   // The location of Uluru
