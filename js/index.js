@@ -11,3 +11,16 @@ function initMap() {
   // The marker, positioned at Uluru
   var marker = new google.maps.Marker({position: uluru, map: map});
 }
+
+
+$(document).ready(function() {
+  var scrollLink = $('.scroll');
+
+  //smooth scrolling
+  scrollLink.click(function(e) {
+    e.preventDefault();
+    $('body, html').animate({
+      scrollTop: $(this.hash).offset().top
+    }, 1000)
+  })
+})
