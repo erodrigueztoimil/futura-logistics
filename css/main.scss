@@ -4,6 +4,7 @@ $header: 'Catamaran', sans-serif;
 
 // colors
 $blue: #374F95;
+$off-white: rgba(229, 229, 229, 0.73);
 
 
 body {
@@ -300,18 +301,14 @@ body {
 
       img {
         border-radius: 50%;
-        height: 140px;
-        width: 140px;
+        height: 160px;
+        width: 160px;
         object-fit: cover;
       }
 
       h3 {
         font-size: 20px;
         padding-top: 20px;
-      }
-
-      p {
-        font-size: 16px;
       }
     }
   }

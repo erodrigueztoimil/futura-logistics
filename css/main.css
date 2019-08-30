@@ -203,16 +203,13 @@ body p {
 }
 #services .container .box img {
   border-radius: 50%;
-  height: 140px;
-  width: 140px;
+  height: 160px;
+  width: 160px;
   object-fit: cover;
 }
 #services .container .box h3 {
   font-size: 20px;
   padding-top: 20px;
-}
-#services .container .box p {
-  font-size: 16px;
 }
 
 @media only screen and (max-width: 959px) {
