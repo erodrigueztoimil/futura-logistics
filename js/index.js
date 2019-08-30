@@ -1,7 +1,7 @@
 console.log('Website made by Ernesto Rodriguez --- GitHub: erodrigueztoimil, Email: erodrigueztoimil@gmail.com');
 
 
-// Initialize and add the map
+// google maps
 function initMap() {
   // The location of Uluru
   var uluru = {lat: 25.8628727, lng: -80.3495185};
@@ -13,6 +13,7 @@ function initMap() {
 }
 
 
+// scroll animation with active handler
 $(document).ready(function() {
   var scrollLink = $('.scroll');
 
@@ -37,4 +38,15 @@ $(document).ready(function() {
       }
     })
   })
+})
+
+
+
+// change navigation background on scroll
+$(document).ready(function() {
+  $(window).scroll(function() {
+    var nav = $('.navigation');
+
+    nav.toggleClass('scrolled', $(this).scrollTop() > nav.height());
+  });
 })
