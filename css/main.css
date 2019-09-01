@@ -16,8 +16,8 @@ body p {
   height: 100vh;
   position: relative;
   background-image: url("../img/enrapture.jpg");
-  background-size: cover;
   background-position: center;
+  background-size: cover;
 }
 #home header {
   width: 100%;

@@ -50,3 +50,10 @@ $(document).ready(function() {
     nav.toggleClass('scrolled', $(this).scrollTop() > nav.height());
   });
 })
+
+
+
+$('#home').scroll(function() {
+    var x = $(this).scrollTop();
+    $(this).css('background-position', '0% ' + parseInt(-x / 10) + 'px');
+});

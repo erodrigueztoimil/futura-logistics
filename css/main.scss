@@ -29,8 +29,8 @@ body {
   height: 100vh;
   position: relative;
   background-image: url('../img/enrapture.jpg');
-  background-size: cover;
   background-position: center;
+  background-size: cover;
 
   header {
     width: 100%;
@@ -484,26 +484,8 @@ body {
         max-width: 440px;
         margin: auto;
 
-        input[type=text], input[type=email], textarea {
-          border: none;
-          border-bottom: 1px solid #000;
-        }
-
-        input[type=submit] {
-          min-width: 35%;
-          max-width: 40%;
-          font-size: 20px;
-          background: #fff;
-          border: 1px solid #000;
-          padding: 12px;
-          margin: 10px;
-          outline: none;
-
-          &:hover {
-            background: $blue;
-            border: 1px solid $blue;
-            color: #fff;
-          }
+        input, textarea {
+          border-radius: none;
         }
       }
 
