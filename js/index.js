@@ -57,3 +57,19 @@ $('#home').scroll(function() {
     var x = $(this).scrollTop();
     $(this).css('background-position', '0% ' + parseInt(-x / 10) + 'px');
 });
+
+
+// menu button animation
+$(document).ready(
+  function() {
+    var menuBtn = $('a.menu-btn');
+    var menuBtnBlock = menuBtn.find('div.menu-btn-block');
+
+    var nav = $('.parent');
+
+    menuBtn.on('click', function() {
+      menuBtnBlock.toggleClass('active');
+      nav.toggleClass('show');
+    })
+  }
+)
