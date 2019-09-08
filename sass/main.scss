@@ -35,82 +35,64 @@ body {
   background-size: cover;
 
   header {
-    background-color: rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.14);
     position: fixed;
     width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 35px 10%;
+    z-index: 2;
 
-    h3, a {
-      color: #fff;
-    }
+    .container {
+      display: flex;
+      align-items: center;
+      padding: 35px 10%;
 
-    i {
-      color: #fff;
-    }
-
-    .divider {
-      flex: 1;
-    }
-
-    .hotdog {
-      i {
-        font-size: 25px;
-      }
-    }
-
-    nav {
-      position: fixed;
-      background: $blue;
-      height: 100vh;
-      width: 100%;
-      top: 0;
-      left: 0;
-      transition: 0.5s ease-in;
-      transform: translate(100%);
-      z-index: 1;
-
-      .close {
-        i {
-          position: absolute;
-          top: 40px;
-          right: 10%;
-          font-size: 30px;
-        }
+      h3, a {
+        color: #fff;
       }
 
-      ul {
-        position: absolute;
-        list-style-type: none;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        margin: 0;
-        padding: 0;
+      .divider {
+        flex: 1;
+      }
 
-        li {
-          padding: 20px;
-          border: 1px solid $blue;
+      nav {
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
 
-          a {
-            font-size: 25px;
-            text-decoration: none;
-          }
+          li {
+            a {
+              text-decoration: none;
+              font-size: 20px;
+            }
 
-          &:hover, &.active {
-            border-bottom: 1px solid #fff;
+            &:hover, &.active {
+              border-bottom: 1px solid #fff;
+            }
           }
         }
       }
+    }
 
-      &.open {
-        transform: translate(0);
+    &.scrolled {
+      background: #fff;
+
+      .container {
+        h3, a, .hotdog {
+          color: #000;
+        }
+
+        nav {
+          ul {
+            li {
+              &:hover, &.active {
+                border-bottom: 1px solid #000;
+              }
+            }
+          }
+        }
       }
     }
   }
-
 
   .shortcut {
     position: absolute;
@@ -118,6 +100,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    z-index: 1;
 
     h4 {
       font-family: $header;
@@ -146,11 +129,95 @@ body {
 }
 
 @media only screen and (max-width:894px) {
-  #home {}
+  #home {
+    header {
+      .container {
+        .menu-btn {
+          color: #fff;
+
+          &.hotdog {
+            font-size: 25px;
+          }
+
+          &.close {
+            position: absolute;
+            top: 35px;
+            right: 10%;
+            font-size: 30px;
+            color: #000;
+          }
+        }
+
+        nav {
+          background: #fff;
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          top: 0;
+          left: 0;
+          transition: 0.5 ease-in;
+          transform: translate(100%);
+
+          ul {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+
+            li {
+              padding: 20px;
+
+              a {
+                color: #000;
+              }
+
+              &:hover, &.active {
+                border-bottom: 1px solid #000;
+              }
+            }
+          }
+
+          &.open {
+            transform: translate(0);
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width:895px) {
-  #home {}
+  #home {
+    header {
+      .container {
+        .menu-btn {
+          display: none;
+        }
+
+        nav {
+          ul {
+            li {
+              display: inline;
+              padding: 10px 15px;
+            }
+          }
+        }
+      }
+
+      &.scrolled {
+          nav {
+            ul {
+              li {
+                &:hover, &.active {
+                  border-bottom: 1px solid #000;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
 }
 
 
@@ -276,7 +343,7 @@ body {
 
 
 #services {
-  padding-top: 100px;
+  padding-top: 120px;
 
   h3 {
     text-align: center;
@@ -367,7 +434,7 @@ body {
 
 
 #contact {
-  padding: 100px 0;
+  padding: 120px 0;
 
   .info {
     text-align: center;

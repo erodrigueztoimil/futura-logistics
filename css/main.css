@@ -22,65 +22,42 @@ body.noScroll {
   background-size: cover;
 }
 #home header {
-  background-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.14);
   position: fixed;
   width: 100%;
+  z-index: 2;
+}
+#home header .container {
   display: flex;
   align-items: center;
   padding: 35px 10%;
 }
-#home header h3, #home header a {
+#home header .container h3, #home header .container a {
   color: #fff;
 }
-#home header i {
-  color: #fff;
-}
-#home header .divider {
+#home header .container .divider {
   flex: 1;
 }
-#home header .hotdog i {
-  font-size: 25px;
-}
-#home header nav {
-  position: fixed;
-  background: #1B4658;
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  left: 0;
-  transition: 0.5s ease-in;
-  transform: translate(100%);
-  z-index: 1;
-}
-#home header nav .close i {
-  position: absolute;
-  top: 40px;
-  right: 10%;
-  font-size: 30px;
-}
-#home header nav ul {
-  position: absolute;
+#home header .container nav ul {
   list-style-type: none;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
   margin: 0;
   padding: 0;
 }
-#home header nav ul li {
-  padding: 20px;
-  border: 1px solid #1B4658;
-}
-#home header nav ul li a {
-  font-size: 25px;
+#home header .container nav ul li a {
   text-decoration: none;
+  font-size: 20px;
 }
-#home header nav ul li:hover, #home header nav ul li.active {
+#home header .container nav ul li:hover, #home header .container nav ul li.active {
   border-bottom: 1px solid #fff;
 }
-#home header nav.open {
-  transform: translate(0);
+#home header.scrolled {
+  background: #fff;
+}
+#home header.scrolled .container h3, #home header.scrolled .container a, #home header.scrolled .container .hotdog {
+  color: #000;
+}
+#home header.scrolled .container nav ul li:hover, #home header.scrolled .container nav ul li.active {
+  border-bottom: 1px solid #000;
 }
 #home .shortcut {
   position: absolute;
@@ -88,6 +65,7 @@ body.noScroll {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  z-index: 1;
 }
 #home .shortcut h4 {
   font-family: "Catamaran", sans-serif;
@@ -111,6 +89,62 @@ body.noScroll {
   color: #000;
 }
 
+@media only screen and (max-width: 894px) {
+  #home header .container .menu-btn {
+    color: #fff;
+  }
+  #home header .container .menu-btn.hotdog {
+    font-size: 25px;
+  }
+  #home header .container .menu-btn.close {
+    position: absolute;
+    top: 35px;
+    right: 10%;
+    font-size: 30px;
+    color: #000;
+  }
+  #home header .container nav {
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: 0.5 ease-in;
+    transform: translate(100%);
+  }
+  #home header .container nav ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  #home header .container nav ul li {
+    padding: 20px;
+  }
+  #home header .container nav ul li a {
+    color: #000;
+  }
+  #home header .container nav ul li:hover, #home header .container nav ul li.active {
+    border-bottom: 1px solid #000;
+  }
+  #home header .container nav.open {
+    transform: translate(0);
+  }
+}
+@media only screen and (min-width: 895px) {
+  #home header .container .menu-btn {
+    display: none;
+  }
+  #home header .container nav ul li {
+    display: inline;
+    padding: 10px 15px;
+  }
+  #home header.scrolled nav ul li:hover, #home header.scrolled nav ul li.active {
+    border-bottom: 1px solid #000;
+  }
+}
 #about {
   padding: 120px 0;
 }
@@ -198,7 +232,7 @@ body.noScroll {
   }
 }
 #services {
-  padding-top: 100px;
+  padding-top: 120px;
 }
 #services h3 {
   text-align: center;
@@ -268,7 +302,7 @@ body.noScroll {
 }
 
 #contact {
-  padding: 100px 0;
+  padding: 120px 0;
 }
 #contact .info {
   text-align: center;
