@@ -1,6 +1,3 @@
-console.log('Website made by Ernesto Rodriguez --- GitHub: erodrigueztoimil, Email: erodrigueztoimil@gmail.com');
-
-
 // google maps
 function initMap() {
   // The location of Uluru
@@ -10,6 +7,42 @@ function initMap() {
       document.getElementById('map'), {zoom: 16, center: uluru});
   // The marker, positioned at Uluru
   var marker = new google.maps.Marker({position: uluru, map: map});
+}
+
+
+// menu button tuggle
+$(document).ready(function() {
+  var menuBtn = $('.menu-btn');
+  var nav = $('nav');
+  var link = $('nav ul li a');
+  var page = $('body')
+
+  $(menuBtn).click(function() {
+    $(nav).toggleClass('open');
+    $(page).toggleClass('noScroll');
+  })
+
+  $(link).click(function() {
+    $(nav).removeClass('open');
+    $(page).removeClass('noScroll');
+  })
+})
+
+
+// parallax bg image
+$(window).scroll(function() {
+  parallax();
+})
+
+function parallax() {
+
+  var wScroll = $(window).scrollTop()
+
+
+  $('.parallax--bg').css('background-position', 'left ' + (wScroll*0.5)+'px');
+
+
+  $('.parallax--box').css('top', -5 + (wScroll*.002)+'em');
 }
 
 
@@ -42,7 +75,7 @@ $(document).ready(function() {
 
 
 
-// change navigation background on scroll
+// // change navigation background on scroll
 $(document).ready(function() {
   $(window).scroll(function() {
     var nav = $('.navigation');
@@ -57,19 +90,3 @@ $('#home').scroll(function() {
     var x = $(this).scrollTop();
     $(this).css('background-position', '0% ' + parseInt(-x / 10) + 'px');
 });
-
-
-// menu button animation
-$(document).ready(
-  function() {
-    var menuBtn = $('a.menu-btn');
-    var menuBtnBlock = menuBtn.find('div.menu-btn-block');
-
-    var nav = $('.parent');
-
-    menuBtn.on('click', function() {
-      menuBtnBlock.toggleClass('active');
-      nav.toggleClass('show');
-    })
-  }
-)
