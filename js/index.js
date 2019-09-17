@@ -1,4 +1,4 @@
-// google maps
+// Initialize and add the map
 function initMap() {
   // The location of Uluru
   var uluru = {lat: 25.8628727, lng: -80.3495185};
