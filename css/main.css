@@ -1,63 +1,145 @@
-body {
+html {
+  scroll-behavior: smooth;
+}
+html body {
   margin: 0;
 }
-body h3 {
+html body h3 {
   font-size: 25px;
   margin: 0;
   font-family: "Catamaran", sans-serif;
 }
-body p {
+html body p {
   font-size: 19px;
   margin: 0;
   font-family: "Open Sans", sans-serif;
 }
-body.noScroll {
+html.overflow {
   overflow: hidden;
 }
 
+nav {
+  background: rgba(255, 255, 255, 0.08);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+nav .menu-container {
+  display: flex;
+  align-items: center;
+  padding: 40px 10%;
+}
+nav .menu-container h3 {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+}
+nav .menu-container .menu-divider {
+  flex: 1;
+}
+nav .menu-container .menu-items ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+nav .menu-container .menu-items ul li {
+  border: 2px solid transparent;
+}
+nav .menu-container .menu-items ul li a {
+  font-size: 20px;
+  text-decoration: none;
+}
+nav .menu-container .menu-items ul li:hover, nav .menu-container .menu-items ul li.active {
+  border-bottom: 2px solid #fff;
+}
+nav .menu-container .menu-button {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+nav .menu-container .menu-button .bar {
+  height: 1px;
+  background-color: #fff;
+  margin: 7px 0;
+  transition: 0.4s;
+}
+nav .menu-container .menu-button.show .bar {
+  background-color: #000;
+}
+nav .menu-container .menu-button.show .top {
+  transform: rotate(-45deg) translate(-4px, 7px);
+}
+nav .menu-container .menu-button.show .middle {
+  opacity: 0;
+}
+nav .menu-container .menu-button.show .bottom {
+  transform: rotate(45deg) translate(-4px, -7px);
+}
+nav.scrolled {
+  background-color: #fff;
+}
+nav.scrolled .menu-container h3 {
+  color: #000;
+}
+nav.scrolled .menu-container .menu-items ul li a {
+  color: #000;
+}
+nav.scrolled .menu-container .menu-items ul li:hover, nav.scrolled .menu-container .menu-items ul li.active {
+  border-bottom: 2px solid #1B4658;
+}
+nav.scrolled .menu-container .menu-button .bar {
+  background-color: #000;
+}
+
+@media only screen and (max-width: 894px) {
+  nav .menu-container .menu-items {
+    position: absolute;
+    background: #fff;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    right: 0;
+    transition: transform 0.2s ease-out;
+    transform: translateX(100%);
+  }
+  nav .menu-container .menu-items ul {
+    position: absolute;
+    flex-direction: column;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  nav .menu-container .menu-items ul li {
+    padding: 10px 0;
+    margin: 10px 0;
+  }
+  nav .menu-container .menu-items ul li a {
+    color: #000;
+  }
+  nav .menu-container .menu-items ul li.active {
+    border-bottom: 2px solid #1B4658;
+  }
+  nav .menu-container .menu-items.show {
+    transform: translateX(0%);
+  }
+}
+@media only screen and (min-width: 895px) {
+  nav .menu-container .menu-items ul li {
+    padding: 5px 15px;
+    display: inline;
+  }
+  nav .menu-container .menu-items ul li a {
+    color: #fff;
+  }
+  nav .menu-container .menu-button {
+    display: none;
+  }
+}
 #home {
   height: 100vh;
   position: relative;
   background-image: url("https://ucarecdn.com/8e4482f3-96ce-4bf7-8bdd-d0914ecf97e5/rsz_enrapture.jpg");
   background-size: cover;
-}
-#home header {
-  background: rgba(255, 255, 255, 0.14);
-  position: fixed;
-  width: 100%;
-  z-index: 2;
-}
-#home header .container {
-  display: flex;
-  align-items: center;
-  padding: 35px 10%;
-}
-#home header .container h3, #home header .container a {
-  color: #fff;
-}
-#home header .container .divider {
-  flex: 1;
-}
-#home header .container nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-#home header .container nav ul li a {
-  text-decoration: none;
-  font-size: 20px;
-}
-#home header .container nav ul li:hover, #home header .container nav ul li.active {
-  border-bottom: 1px solid #fff;
-}
-#home header.scrolled {
-  background: #fff;
-}
-#home header.scrolled .container h3, #home header.scrolled .container a, #home header.scrolled .container .hotdog {
-  color: #000;
-}
-#home header.scrolled .container nav ul li:hover, #home header.scrolled .container nav ul li.active {
-  border-bottom: 1px solid #000;
 }
 #home .shortcut {
   position: absolute;
@@ -89,64 +171,8 @@ body.noScroll {
   color: #000;
 }
 
-@media only screen and (max-width: 894px) {
-  #home header .container .menu-btn {
-    color: #fff;
-  }
-  #home header .container .menu-btn.hotdog {
-    font-size: 25px;
-  }
-  #home header .container .menu-btn.close {
-    position: absolute;
-    top: 35px;
-    right: 10%;
-    font-size: 30px;
-    color: #000;
-  }
-  #home header .container nav {
-    background: #fff;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    transition: 0.5 ease-in;
-    transform: translate(100%);
-  }
-  #home header .container nav ul {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  #home header .container nav ul li {
-    padding: 20px;
-  }
-  #home header .container nav ul li a {
-    color: #000;
-  }
-  #home header .container nav ul li:hover, #home header .container nav ul li.active {
-    border-bottom: 1px solid #000;
-  }
-  #home header .container nav.open {
-    transform: translate(0);
-  }
-}
-@media only screen and (min-width: 895px) {
-  #home header .container .menu-btn {
-    display: none;
-  }
-  #home header .container nav ul li {
-    display: inline;
-    padding: 10px 15px;
-  }
-  #home header.scrolled nav ul li:hover, #home header.scrolled nav ul li.active {
-    border-bottom: 1px solid #000;
-  }
-}
 #about {
-  padding: 120px 0;
+  padding: 130px 0;
 }
 #about .wrapper {
   display: flex;
@@ -232,7 +258,7 @@ body.noScroll {
   }
 }
 #services {
-  padding-top: 120px;
+  padding-top: 130px;
 }
 #services h3 {
   text-align: center;
@@ -302,7 +328,7 @@ body.noScroll {
 }
 
 #contact {
-  padding: 120px 0;
+  padding: 130px 0;
 }
 #contact .info {
   text-align: center;
