@@ -506,6 +506,10 @@ nav {
         font-family: $paragraph;
 
         input[type=text], input[type=email], textarea {
+          // fixing styling
+          -webkit-appearance: none;
+          border-radius: 0;
+          // bug on ios
           border: none;
           border-bottom: 1px solid #000;
           font-size: 20px;

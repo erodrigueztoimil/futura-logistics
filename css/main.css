@@ -366,6 +366,8 @@ nav.scrolled .menu-container .menu-button .bar {
   font-family: "Open Sans", sans-serif;
 }
 #contact .container .content form input[type=text], #contact .container .content form input[type=email], #contact .container .content form textarea {
+  -webkit-appearance: none;
+  border-radius: 0;
   border: none;
   border-bottom: 1px solid #000;
   font-size: 20px;
