@@ -103,18 +103,22 @@ jQuery(
 )
 
 
-// accross platform smooth scroll handler
-jQuery(
-  function() {
-    var anchor = $('nav a[href^="#"]');
-    var root = $('html, body');
+// this code was copied from an example online, for more information go to this site: https://www.taniarascia.com/smooth-scroll-to-id-with-jquery/
 
-    anchor.click(function() {
-      root.animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-      }, 10 );
-    });
-  }
+// on single-page sites, when anchor is clicked ...
+$(document).ready(
+  // add smooth scroll animation to html
+  $('a[href*="#"]').on('click', function(e) {
+    e.preventDefault()
+
+    $('html, body').animate(
+      {
+        scrollTop: $($(this).attr('href')).offset().top,
+      },
+      1100,
+      'linear'
+    )
+  })
 )
 
 
