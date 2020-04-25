@@ -1,33 +1,30 @@
+@import "reset";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,800&display=swap");
+
 // fonts
-$paragraph: 'Open Sans', sans-serif;
-$header: 'Catamaran', sans-serif;
+$sans: "Open Sans", sans-serif;
 
 // colors
-$blue: #1B4658;
+$blue: #1b4658;
 $off-white: rgba(229, 229, 229, 0.73);
 
 html {
-  body {
-    margin: 0;
+  font-family: $sans;
 
-    h3 {
-      font-size: 25px;
-      margin: 0;
-      font-family: $header;
-    }
+  h3 {
+    font-size: 25px;
+    font-weight: bold;
+  }
 
-    p {
-      font-size: 19px;
-      margin: 0;
-      font-family: $paragraph;
-    }
+  p {
+    font-size: 16px;
+    line-height: 25px;
   }
 
   &.overflow {
     overflow: hidden;
   }
 }
-
 
 // navigation section starts here
 nav {
@@ -39,11 +36,21 @@ nav {
   .menu-container {
     display: flex;
     align-items: center;
-    padding: 40px 10%;
+    padding: 30px 10%;
 
-    h3 {
-      color: #fff;
-      font-family: $paragraph;
+    .brand {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 40px;
+        margin-right: 10px;
+      }
+
+      h3 {
+        color: #fff;
+        font-weight: bold;
+      }
     }
 
     .menu-divider {
@@ -60,11 +67,12 @@ nav {
           border: 2px solid transparent;
 
           a {
-            font-size: 20px;
+            font-size: 18px;
             text-decoration: none;
           }
 
-          &:hover, &.active {
+          &:hover,
+          &.active {
             border-bottom: 2px solid #fff;
           }
         }
@@ -118,7 +126,8 @@ nav {
               color: #000;
             }
 
-            &:hover, &.active {
+            &:hover,
+            &.active {
               border-bottom: 2px solid $blue;
             }
           }
@@ -134,7 +143,7 @@ nav {
   }
 }
 
-@media only screen and (max-width:894px) {
+@media only screen and (max-width: 894px) {
   nav {
     .menu-container {
       .menu-items {
@@ -173,13 +182,11 @@ nav {
           transform: translateX(0%);
         }
       }
-
-      .menu-button {}
     }
   }
 }
 
-@media only screen and (min-width:895px) {
+@media only screen and (min-width: 895px) {
   nav {
     .menu-container {
       .menu-items {
@@ -203,11 +210,10 @@ nav {
 }
 // navigation section ends here
 
-
 #home {
   height: 100vh;
   position: relative;
-  background-image: url('https://ucarecdn.com/8e4482f3-96ce-4bf7-8bdd-d0914ecf97e5/rsz_enrapture.jpg');
+  background-image: url("https://ucarecdn.com/8e4482f3-96ce-4bf7-8bdd-d0914ecf97e5/rsz_enrapture.jpg");
   background-size: cover;
 
   .shortcut {
@@ -219,7 +225,6 @@ nav {
     z-index: 1;
 
     h4 {
-      font-family: $header;
       font-size: 60px;
       color: #fff;
       margin: 0;
@@ -231,7 +236,7 @@ nav {
     a {
       padding: 15px 50px;
       text-decoration: none;
-      font-family: $header;
+
       font-size: 20px;
       color: #fff;
       border: 1px solid #fff;
@@ -245,182 +250,74 @@ nav {
 }
 
 #about {
-  padding: 130px 0;
+  padding: 140px 10% 110px;
 
-  .wrapper {
+  .image {
+    background-image: url("https://ucarecdn.com/49bf06b6-c237-49c3-a246-51845d760ef9/rsz_bandura.jpg");
+    background-position: center;
+    background-size: cover;
+    min-height: 300px;
+  }
+
+  .text {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 90px 5%;
 
-    .desc {
-      h3 {
-        padding: 10px 0;
-      }
-    }
-
-    .image {
-      img {
-        width: 80%;
-        display: block;
-        object-fit: cover;
-      }
+    h3 {
+      margin-bottom: 15px;
     }
   }
 }
 
-@media (max-width:768px) {
+@media only screen and (max-width: 991px) {
   #about {
-    h3 {}
-    .wrapper {
-      flex-direction: column;
-
-      .desc {
-        padding: 0 13%;
-
-        p {}
-      }
-
-      .image {
-        img {
-          height: 300px;
-          margin: 50px auto 30px;
-        }
-      }
+    .text {
+      padding: 0;
+      margin-top: 50px;
     }
   }
 }
 
-@media (min-width:769px) {
-  #about {
-    .wrapper {
-      .desc, .image {
-        width: 50%;
-      }
-
-      .desc {
-        margin: 50px 0;
-        float: right;
-
-        h3, p {
-          padding-left: 10%;
-          padding-right: 10%;
-        }
-      }
-
-      .image {
-        position: relative;
-
-        img {
-          position: absolute;
-          height: 100%;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
-      }
-    }
-  }
-}
-
-
-#information {
+#stats {
   background: $blue;
+  text-align: center;
   color: #fff;
 
-  h4, p {
-    margin: 0;
-  }
+  padding: 60px 5%;
 
-  h4 {
-    font-size: 30px;
-    font-family: $header;
-  }
-
-  p {
-    font-size: 20px;
-    font-family: $paragraph;
+  h3 {
+    margin-bottom: 15px;
   }
 }
-
-@media (max-width:799px) {
-  #information {
-    text-align: center;
-    padding: 20px;
-
-    .child {
-      padding: 30px 0;
-    }
-  }
-}
-
-@media (min-width:800px) {
-  #information {
-    display: flex;
-    padding: 40px 10px;
-
-    .child {
-      width: 25%;
-      text-align: center;
-      padding: 20px;
-    }
-  }
-}
-
 
 #services {
-  padding-top: 130px;
+  padding: 130px 5% 0;
 
   h3 {
     text-align: center;
+    margin-bottom: 50px;
   }
 
-  .container {
-    .box {
-      text-align: center;
-      margin: 15px;
-      width: 90%;
-      max-width: 270px;
+  .box {
+    text-align: center;
+    padding: 15px;
 
-      img {
-        border-radius: 50%;
-        height: 160px;
-        width: 160px;
-        object-fit: cover;
-      }
+    img {
+      border-radius: 50%;
+      height: 160px;
+      width: 160px;
+      object-fit: cover;
+    }
 
-      h3 {
-        font-size: 20px;
-        padding-top: 20px;
-      }
+    h3 {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 20px 0 10px;
     }
   }
 }
-
-@media only screen and (max-width:959px) {
-  #services {
-    .container {
-      .box {
-        margin: 40px auto;
-        padding: 20px 0;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width:960px) {
-  #services {
-    .container {
-      display: flex;
-      margin-top: 60px;
-      margin-left: 3%;
-      margin-right: 3%;
-
-      .box {
-        margin: 0 auto;
-        padding: 0 10px;
-      }
-    }
-  }
-}
-
 
 #tracking {
   text-align: center;
@@ -434,7 +331,6 @@ nav {
   }
 
   p {
-    font-size: $paragraph;
     font-size: 20px;
     margin: 0;
     padding-bottom: 40px;
@@ -443,7 +339,7 @@ nav {
   a {
     padding: 10px 50px;
     text-decoration: none;
-    font-family: $header;
+
     font-size: 20px;
     color: #fff;
     border: 1px solid #fff;
@@ -454,7 +350,6 @@ nav {
     }
   }
 }
-
 
 #contact {
   padding: 130px 0;
@@ -470,7 +365,6 @@ nav {
       .item {
         margin: 20px 7%;
         h4 {
-          font-family: $header;
           font-size: 20px;
           margin: 0;
         }
@@ -478,7 +372,7 @@ nav {
         a {
           font-size: 19px;
           margin: 0;
-          font-family: $paragraph;
+
           color: #000;
           text-decoration: none;
         }
@@ -490,7 +384,8 @@ nav {
     display: flex;
 
     .box {
-      #map {}
+      #map {
+      }
     }
 
     .content {
@@ -501,9 +396,9 @@ nav {
         flex-direction: column;
         text-align: center;
 
-        font-family: $paragraph;
-
-        input[type=text], input[type=email], textarea {
+        input[type="text"],
+        input[type="email"],
+        textarea {
           // fixing styling
           -webkit-appearance: none;
           border-radius: 0;
@@ -522,7 +417,7 @@ nav {
           resize: vertical;
         }
 
-        input[type=submit] {
+        input[type="submit"] {
           min-width: 35%;
           max-width: 40%;
           font-size: 20px;
@@ -543,7 +438,7 @@ nav {
   }
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width: 768px) {
   #contact {
     .info {
       margin-bottom: 30px;
@@ -560,7 +455,8 @@ nav {
         max-width: 440px;
         margin: auto;
 
-        input, textarea {
+        input,
+        textarea {
           border-radius: none;
         }
       }
@@ -575,14 +471,15 @@ nav {
   }
 }
 
-@media only screen and (min-width:769px) {
+@media only screen and (min-width: 769px) {
   #contact {
     .info {
       margin-bottom: 70px;
     }
 
     .container {
-      .content, .box {
+      .content,
+      .box {
         width: 50%;
       }
 
@@ -602,12 +499,12 @@ nav {
 
       .content {
         padding-left: 7%;
-        form {}
+        form {
+        }
       }
     }
   }
 }
-
 
 footer {
   background: $blue;
@@ -615,7 +512,6 @@ footer {
   text-align: center;
 
   h5 {
-    font-family: $header;
     font-size: 18px;
     color: #fff;
     padding-top: 50px;

@@ -1,16 +1,153 @@
-html body {
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,800&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
-html body h3 {
-  font-size: 25px;
-  margin: 0;
-  font-family: "Catamaran", sans-serif;
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
-html body p {
-  font-size: 19px;
-  margin: 0;
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
   font-family: "Open Sans", sans-serif;
 }
+
+html h3 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+html p {
+  font-size: 16px;
+  line-height: 25px;
+}
+
 html.overflow {
   overflow: hidden;
 }
@@ -21,68 +158,109 @@ nav {
   width: 100%;
   z-index: 2;
 }
+
 nav .menu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  padding: 40px 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 10%;
 }
-nav .menu-container h3 {
+
+nav .menu-container .brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .menu-container .brand img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+nav .menu-container .brand h3 {
   color: #fff;
-  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
 }
+
 nav .menu-container .menu-divider {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
+
 nav .menu-container .menu-items ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
+
 nav .menu-container .menu-items ul li {
   border: 2px solid transparent;
 }
+
 nav .menu-container .menu-items ul li a {
-  font-size: 20px;
+  font-size: 18px;
   text-decoration: none;
 }
+
 nav .menu-container .menu-items ul li:hover, nav .menu-container .menu-items ul li.active {
   border-bottom: 2px solid #fff;
 }
+
 nav .menu-container .menu-button {
   display: inline-block;
   height: 30px;
   width: 30px;
 }
+
 nav .menu-container .menu-button .bar {
   height: 1px;
   background-color: #fff;
   margin: 7px 0;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
+
 nav .menu-container .menu-button.show .bar {
   background-color: #000;
 }
+
 nav .menu-container .menu-button.show .top {
-  transform: rotate(-45deg) translate(-4px, 7px);
+  -webkit-transform: rotate(-45deg) translate(-4px, 7px);
+          transform: rotate(-45deg) translate(-4px, 7px);
 }
+
 nav .menu-container .menu-button.show .middle {
   opacity: 0;
 }
+
 nav .menu-container .menu-button.show .bottom {
-  transform: rotate(45deg) translate(-4px, -7px);
+  -webkit-transform: rotate(45deg) translate(-4px, -7px);
+          transform: rotate(45deg) translate(-4px, -7px);
 }
+
 nav.scrolled {
   background-color: #fff;
 }
+
 nav.scrolled .menu-container h3 {
   color: #000;
 }
+
 nav.scrolled .menu-container .menu-items ul li a {
   color: #000;
 }
+
 nav.scrolled .menu-container .menu-items ul li:hover, nav.scrolled .menu-container .menu-items ul li.active {
-  border-bottom: 2px solid #1B4658;
+  border-bottom: 2px solid #1b4658;
 }
+
 nav.scrolled .menu-container .menu-button .bar {
   background-color: #000;
 }
@@ -95,16 +273,24 @@ nav.scrolled .menu-container .menu-button .bar {
     width: 100vw;
     top: 0;
     right: 0;
+    -webkit-transition: -webkit-transform 0.2s ease-out;
+    transition: -webkit-transform 0.2s ease-out;
     transition: transform 0.2s ease-out;
-    transform: translateX(100%);
+    transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
   nav .menu-container .menu-items ul {
     position: absolute;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   nav .menu-container .menu-items ul li {
     padding: 10px 0;
@@ -114,12 +300,14 @@ nav.scrolled .menu-container .menu-button .bar {
     color: #000;
   }
   nav .menu-container .menu-items ul li.active {
-    border-bottom: 2px solid #1B4658;
+    border-bottom: 2px solid #1b4658;
   }
   nav .menu-container .menu-items.show {
-    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
 }
+
 @media only screen and (min-width: 895px) {
   nav .menu-container .menu-items ul li {
     padding: 5px 15px;
@@ -132,22 +320,25 @@ nav.scrolled .menu-container .menu-button .bar {
     display: none;
   }
 }
+
 #home {
   height: 100vh;
   position: relative;
   background-image: url("https://ucarecdn.com/8e4482f3-96ce-4bf7-8bdd-d0914ecf97e5/rsz_enrapture.jpg");
   background-size: cover;
 }
+
 #home .shortcut {
   position: absolute;
   top: 60%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   text-align: center;
   z-index: 1;
 }
+
 #home .shortcut h4 {
-  font-family: "Catamaran", sans-serif;
   font-size: 60px;
   color: #fff;
   margin: 0;
@@ -155,170 +346,121 @@ nav.scrolled .menu-container .menu-button .bar {
   font-weight: bold;
   line-height: 60px;
 }
+
 #home .shortcut a {
   padding: 15px 50px;
   text-decoration: none;
-  font-family: "Catamaran", sans-serif;
   font-size: 20px;
   color: #fff;
   border: 1px solid #fff;
 }
+
 #home .shortcut a:hover {
   background: #fff;
   color: #000;
 }
 
 #about {
-  padding: 130px 0;
+  padding: 140px 10% 110px;
 }
-#about .wrapper {
+
+#about .image {
+  background-image: url("https://ucarecdn.com/49bf06b6-c237-49c3-a246-51845d760ef9/rsz_bandura.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 300px;
+}
+
+#about .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-}
-#about .wrapper .desc h3 {
-  padding: 10px 0;
-}
-#about .wrapper .image img {
-  width: 80%;
-  display: block;
-  object-fit: cover;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 90px 5%;
 }
 
-@media (max-width: 768px) {
-  #about .wrapper {
-    flex-direction: column;
-  }
-  #about .wrapper .desc {
-    padding: 0 13%;
-  }
-  #about .wrapper .image img {
-    height: 300px;
-    margin: 50px auto 30px;
+#about .text h3 {
+  margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 991px) {
+  #about .text {
+    padding: 0;
+    margin-top: 50px;
   }
 }
-@media (min-width: 769px) {
-  #about .wrapper .desc, #about .wrapper .image {
-    width: 50%;
-  }
-  #about .wrapper .desc {
-    margin: 50px 0;
-    float: right;
-  }
-  #about .wrapper .desc h3, #about .wrapper .desc p {
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-  #about .wrapper .image {
-    position: relative;
-  }
-  #about .wrapper .image img {
-    position: absolute;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-#information {
-  background: #1B4658;
+
+#stats {
+  background: #1b4658;
+  text-align: center;
   color: #fff;
-}
-#information h4, #information p {
-  margin: 0;
-}
-#information h4 {
-  font-size: 30px;
-  font-family: "Catamaran", sans-serif;
-}
-#information p {
-  font-size: 20px;
-  font-family: "Open Sans", sans-serif;
+  padding: 60px 5%;
 }
 
-@media (max-width: 799px) {
-  #information {
-    text-align: center;
-    padding: 20px;
-  }
-  #information .child {
-    padding: 30px 0;
-  }
+#stats h3 {
+  margin-bottom: 15px;
 }
-@media (min-width: 800px) {
-  #information {
-    display: flex;
-    padding: 40px 10px;
-  }
-  #information .child {
-    width: 25%;
-    text-align: center;
-    padding: 20px;
-  }
-}
+
 #services {
-  padding-top: 130px;
+  padding: 130px 5% 0;
 }
+
 #services h3 {
   text-align: center;
+  margin-bottom: 50px;
 }
-#services .container .box {
+
+#services .box {
   text-align: center;
-  margin: 15px;
-  width: 90%;
-  max-width: 270px;
+  padding: 15px;
 }
-#services .container .box img {
+
+#services .box img {
   border-radius: 50%;
   height: 160px;
   width: 160px;
-  object-fit: cover;
-}
-#services .container .box h3 {
-  font-size: 20px;
-  padding-top: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-@media only screen and (max-width: 959px) {
-  #services .container .box {
-    margin: 40px auto;
-    padding: 20px 0;
-  }
+#services .box h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0 10px;
 }
-@media only screen and (min-width: 960px) {
-  #services .container {
-    display: flex;
-    margin-top: 60px;
-    margin-left: 3%;
-    margin-right: 3%;
-  }
-  #services .container .box {
-    margin: 0 auto;
-    padding: 0 10px;
-  }
-}
+
 #tracking {
   text-align: center;
-  background: #1B4658;
+  background: #1b4658;
   color: #fff;
   padding: 100px 20px;
   margin-top: 150px;
 }
+
 #tracking h3 {
   font-size: 30px;
 }
+
 #tracking p {
-  font-size: "Open Sans", sans-serif;
   font-size: 20px;
   margin: 0;
   padding-bottom: 40px;
 }
+
 #tracking a {
   padding: 10px 50px;
   text-decoration: none;
-  font-family: "Catamaran", sans-serif;
   font-size: 20px;
   color: #fff;
   border: 1px solid #fff;
 }
+
 #tracking a:hover {
   background: #fff;
   color: #000;
@@ -327,42 +469,61 @@ nav.scrolled .menu-container .menu-button .bar {
 #contact {
   padding: 130px 0;
 }
+
 #contact .info {
   text-align: center;
 }
+
 #contact .info .desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 20px;
 }
+
 #contact .info .desc .item {
   margin: 20px 7%;
 }
+
 #contact .info .desc .item h4 {
-  font-family: "Catamaran", sans-serif;
   font-size: 20px;
   margin: 0;
 }
+
 #contact .info .desc .item a {
   font-size: 19px;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
   color: #000;
   text-decoration: none;
 }
+
 #contact .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 #contact .container .content {
   margin: 60px 0;
 }
+
 #contact .container .content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
-  font-family: "Open Sans", sans-serif;
 }
-#contact .container .content form input[type=text], #contact .container .content form input[type=email], #contact .container .content form textarea {
+
+#contact .container .content form input[type="text"],
+#contact .container .content form input[type="email"],
+#contact .container .content form textarea {
   -webkit-appearance: none;
   border-radius: 0;
   border: none;
@@ -373,11 +534,13 @@ nav.scrolled .menu-container .menu-button .bar {
   color: #000;
   outline: none;
 }
+
 #contact .container .content form textarea {
   min-height: 180px;
   resize: vertical;
 }
-#contact .container .content form input[type=submit] {
+
+#contact .container .content form input[type="submit"] {
   min-width: 35%;
   max-width: 40%;
   font-size: 20px;
@@ -387,9 +550,10 @@ nav.scrolled .menu-container .menu-button .bar {
   margin: 10px;
   outline: none;
 }
-#contact .container .content form input[type=submit]:hover {
-  background: #1B4658;
-  border: 1px solid #1B4658;
+
+#contact .container .content form input[type="submit"]:hover {
+  background: #1b4658;
+  border: 1px solid #1b4658;
   color: #fff;
 }
 
@@ -398,17 +562,24 @@ nav.scrolled .menu-container .menu-button .bar {
     margin-bottom: 30px;
   }
   #contact .info .desc {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   #contact .container {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   #contact .container .content {
     width: 80%;
     max-width: 440px;
     margin: auto;
   }
-  #contact .container .content input, #contact .container .content textarea {
+  #contact .container .content input,
+  #contact .container .content textarea {
     border-radius: none;
   }
   #contact .container .box #map {
@@ -416,11 +587,13 @@ nav.scrolled .menu-container .menu-button .bar {
     margin: 40px 8%;
   }
 }
+
 @media only screen and (min-width: 769px) {
   #contact .info {
     margin-bottom: 70px;
   }
-  #contact .container .content, #contact .container .box {
+  #contact .container .content,
+  #contact .container .box {
     width: 50%;
   }
   #contact .container .content form {
@@ -435,17 +608,17 @@ nav.scrolled .menu-container .menu-button .bar {
     padding-left: 7%;
   }
 }
+
 footer {
-  background: #1B4658;
+  background: #1b4658;
   height: 120px;
   text-align: center;
 }
+
 footer h5 {
-  font-family: "Catamaran", sans-serif;
   font-size: 18px;
   color: #fff;
   padding-top: 50px;
   margin: 0;
 }
-
 /*# sourceMappingURL=main.css.map */
