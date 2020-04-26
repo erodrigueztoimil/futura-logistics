@@ -63,7 +63,7 @@ jQuery(function () {
     var position = $(this).scrollTop();
 
     link.each(function () {
-      var offset = $(this.hash).offset().top - 30;
+      var offset = $(this.hash).offset().top - 200;
 
       if (offset <= position) {
         $(this).parent().addClass("active");

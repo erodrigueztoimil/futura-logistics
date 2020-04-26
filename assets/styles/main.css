@@ -403,12 +403,60 @@ nav.scrolled .menu-container .menu-button .bar {
   padding: 60px 5%;
 }
 
-#stats h3 {
+#stats .stat {
+  margin: 15px 0;
+}
+
+#stats .stat h3 {
   margin-bottom: 15px;
 }
 
+#credit-cards {
+  padding: 100px 20%;
+  text-align: center;
+}
+
+#credit-cards h3 {
+  margin: 20px 0 30px;
+}
+
+#credit-cards .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#credit-cards .row img {
+  width: 50%;
+  max-width: 150px;
+  margin: 20px;
+}
+
+#tracking {
+  text-align: center;
+  background: #1b4658;
+  color: #fff;
+  padding: 100px 20px;
+}
+
+#tracking p {
+  padding: 10px 0 40px;
+}
+
+#tracking a {
+  padding: 10px 50px;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+#tracking a:hover {
+  background: #fff;
+  color: #000;
+}
+
 #services {
-  padding: 130px 5% 0;
+  padding: 130px 5%;
 }
 
 #services h3 {
@@ -435,190 +483,13 @@ nav.scrolled .menu-container .menu-button .bar {
   margin: 20px 0 10px;
 }
 
-#tracking {
-  text-align: center;
-  background: #1b4658;
-  color: #fff;
-  padding: 100px 20px;
-  margin-top: 150px;
-}
-
-#tracking h3 {
-  font-size: 30px;
-}
-
-#tracking p {
-  font-size: 20px;
-  margin: 0;
-  padding-bottom: 40px;
-}
-
-#tracking a {
-  padding: 10px 50px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #fff;
-  border: 1px solid #fff;
-}
-
-#tracking a:hover {
-  background: #fff;
-  color: #000;
-}
-
-#contact {
-  padding: 130px 0;
-}
-
-#contact .info {
-  text-align: center;
-}
-
-#contact .info .desc {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 20px;
-}
-
-#contact .info .desc .item {
-  margin: 20px 7%;
-}
-
-#contact .info .desc .item h4 {
-  font-size: 20px;
-  margin: 0;
-}
-
-#contact .info .desc .item a {
-  font-size: 19px;
-  margin: 0;
-  color: #000;
-  text-decoration: none;
-}
-
-#contact .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-#contact .container .content {
-  margin: 60px 0;
-}
-
-#contact .container .content form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-}
-
-#contact .container .content form input[type="text"],
-#contact .container .content form input[type="email"],
-#contact .container .content form textarea {
-  -webkit-appearance: none;
-  border-radius: 0;
-  border: none;
-  border-bottom: 1px solid #000;
-  font-size: 20px;
-  margin: 10px;
-  padding: 10px 0;
-  color: #000;
-  outline: none;
-}
-
-#contact .container .content form textarea {
-  min-height: 180px;
-  resize: vertical;
-}
-
-#contact .container .content form input[type="submit"] {
-  min-width: 35%;
-  max-width: 40%;
-  font-size: 20px;
-  background: #fff;
-  border: 1px solid #000;
-  padding: 12px;
-  margin: 10px;
-  outline: none;
-}
-
-#contact .container .content form input[type="submit"]:hover {
-  background: #1b4658;
-  border: 1px solid #1b4658;
-  color: #fff;
-}
-
-@media only screen and (max-width: 768px) {
-  #contact .info {
-    margin-bottom: 30px;
-  }
-  #contact .info .desc {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  #contact .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  #contact .container .content {
-    width: 80%;
-    max-width: 440px;
-    margin: auto;
-  }
-  #contact .container .content input,
-  #contact .container .content textarea {
-    border-radius: none;
-  }
-  #contact .container .box #map {
-    height: 350px;
-    margin: 40px 8%;
-  }
-}
-
-@media only screen and (min-width: 769px) {
-  #contact .info {
-    margin-bottom: 70px;
-  }
-  #contact .container .content,
-  #contact .container .box {
-    width: 50%;
-  }
-  #contact .container .content form {
-    width: 80%;
-  }
-  #contact .container .box #map {
-    height: 100%;
-    margin-left: 15%;
-    padding-left: 10%;
-  }
-  #contact .container .content {
-    padding-left: 7%;
-  }
-}
-
 footer {
   background: #1b4658;
-  height: 120px;
   text-align: center;
 }
 
 footer h5 {
-  font-size: 18px;
   color: #fff;
-  padding-top: 50px;
-  margin: 0;
+  padding: 40px 10%;
 }
 /*# sourceMappingURL=main.css.map */
