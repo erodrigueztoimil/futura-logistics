@@ -361,7 +361,7 @@ nav.scrolled .menu-container .menu-button .bar {
 }
 
 #about {
-  padding: 140px 10% 110px;
+  padding: 140px 10% 0;
 }
 
 #about .image {
@@ -456,7 +456,7 @@ nav.scrolled .menu-container .menu-button .bar {
 }
 
 #services {
-  padding: 130px 5% 0;
+  padding: 130px 5%;
 }
 
 #services h3 {
