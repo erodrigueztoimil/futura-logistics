@@ -367,8 +367,15 @@ nav {
 
 #contact {
   padding: 130px 10%;
+
   h3 {
     text-align: center;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
   }
 
   .row {
@@ -376,7 +383,7 @@ nav {
 
     .info-item {
       display: flex;
-      justify-content: center;
+      // justify-content: center;
       padding: 10px 0;
 
       .column {
@@ -385,8 +392,8 @@ nav {
         padding: 0 10px;
         font-size: 18px;
 
-        label {
-          font-weight: bolder;
+        p {
+          font-style: italic;
           padding-top: 10px;
 
           &:first-child {
@@ -395,7 +402,6 @@ nav {
         }
 
         a {
-          // padding-bottom: 10px;
           line-height: 25px;
           text-decoration: none;
           color: black;
@@ -404,175 +410,14 @@ nav {
     }
 
     form {
-      padding: 50px 0 30px;
+      padding-bottom: 30px;
 
       label {
         margin-bottom: 5px;
       }
     }
-
-    iframe {
-      width: 100%;
-      height: 100%;
-      min-height: 350px;
-    }
   }
 }
-
-// #contact {
-//   padding: 130px 0;
-
-//   .info {
-//     text-align: center;
-
-//     .desc {
-//       display: flex;
-//       justify-content: center;
-//       margin-top: 20px;
-
-//       .item {
-//         margin: 20px 7%;
-//         h4 {
-//           font-size: 20px;
-//           margin: 0;
-//         }
-
-//         a {
-//           font-size: 19px;
-//           margin: 0;
-
-//           color: #000;
-//           text-decoration: none;
-//         }
-//       }
-//     }
-//   }
-
-//   .container {
-//     display: flex;
-
-//     .box {
-//       #map {
-//       }
-//     }
-
-//     .content {
-//       margin: 60px 0;
-
-//       form {
-//         display: flex;
-//         flex-direction: column;
-//         text-align: center;
-
-//         input[type="text"],
-//         input[type="email"],
-//         textarea {
-//           // fixing styling
-//           -webkit-appearance: none;
-//           border-radius: 0;
-//           // bug on ios
-//           border: none;
-//           border-bottom: 1px solid #000;
-//           font-size: 20px;
-//           margin: 10px;
-//           padding: 10px 0;
-//           color: #000;
-//           outline: none;
-//         }
-
-//         textarea {
-//           min-height: 180px;
-//           resize: vertical;
-//         }
-
-//         input[type="submit"] {
-//           min-width: 35%;
-//           max-width: 40%;
-//           font-size: 20px;
-//           background: #fff;
-//           border: 1px solid #000;
-//           padding: 12px;
-//           margin: 10px;
-//           outline: none;
-
-//           &:hover {
-//             background: $blue;
-//             border: 1px solid $blue;
-//             color: #fff;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-// @media only screen and (max-width: 768px) {
-//   #contact {
-//     .info {
-//       margin-bottom: 30px;
-//       .desc {
-//         flex-direction: column;
-//       }
-//     }
-
-//     .container {
-//       flex-direction: column;
-
-//       .content {
-//         width: 80%;
-//         max-width: 440px;
-//         margin: auto;
-
-//         input,
-//         textarea {
-//           border-radius: none;
-//         }
-//       }
-
-//       .box {
-//         #map {
-//           height: 350px;
-//           margin: 40px 8%;
-//         }
-//       }
-//     }
-//   }
-// }
-
-// @media only screen and (min-width: 769px) {
-//   #contact {
-//     .info {
-//       margin-bottom: 70px;
-//     }
-
-//     .container {
-//       .content,
-//       .box {
-//         width: 50%;
-//       }
-
-//       .content {
-//         form {
-//           width: 80%;
-//         }
-//       }
-
-//       .box {
-//         #map {
-//           height: 100%;
-//           margin-left: 15%;
-//           padding-left: 10%;
-//         }
-//       }
-
-//       .content {
-//         padding-left: 7%;
-//         form {
-//         }
-//       }
-//     }
-//   }
-// }
 
 footer {
   background: $blue;
