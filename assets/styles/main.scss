@@ -390,7 +390,6 @@ nav {
         display: flex;
         flex-direction: column;
         padding: 0 10px;
-        font-size: 18px;
 
         p {
           font-style: italic;
@@ -405,6 +404,10 @@ nav {
           line-height: 25px;
           text-decoration: none;
           color: black;
+        }
+
+        span {
+          font-style: italic;
         }
       }
     }

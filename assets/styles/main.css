@@ -517,7 +517,6 @@ nav.scrolled .menu-container .menu-button .bar {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0 10px;
-  font-size: 18px;
 }
 
 #contact .row .info-item .column p {
@@ -533,6 +532,10 @@ nav.scrolled .menu-container .menu-button .bar {
   line-height: 25px;
   text-decoration: none;
   color: black;
+}
+
+#contact .row .info-item .column span {
+  font-style: italic;
 }
 
 #contact .row form {
