@@ -166,7 +166,7 @@ nav .menu-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 30px 10%;
+  padding: 30px 5%;
 }
 
 nav .menu-container .brand {
@@ -211,6 +211,19 @@ nav .menu-container .menu-items ul li a {
 
 nav .menu-container .menu-items ul li:hover, nav .menu-container .menu-items ul li.active {
   border-bottom: 2px solid #fff;
+}
+
+nav .menu-container .menu-items ul .login-bttn {
+  border: 1px solid #fff;
+}
+
+nav .menu-container .menu-items ul .login-bttn:hover, nav .menu-container .menu-items ul .login-bttn.active {
+  border: 1px solid #fff;
+  background-color: #fff;
+}
+
+nav .menu-container .menu-items ul .login-bttn:hover a, nav .menu-container .menu-items ul .login-bttn.active a {
+  color: #1b4658;
 }
 
 nav .menu-container .menu-button {
@@ -261,11 +274,24 @@ nav.scrolled .menu-container .menu-items ul li:hover, nav.scrolled .menu-contain
   border-bottom: 2px solid #1b4658;
 }
 
-nav.scrolled .menu-container .menu-button .bar {
+nav.scrolled .menu-container .menu-items ul .login-bttn {
+  border-color: #000;
+}
+
+nav.scrolled .menu-container .menu-items ul .login-bttn:hover, nav.scrolled .menu-container .menu-items ul .login-bttn.active {
+  border: 1px solid #1b4658;
+  background-color: #1b4658;
+}
+
+nav.scrolled .menu-container .menu-items ul .login-bttn:hover a, nav.scrolled .menu-container .menu-items ul .login-bttn.active a {
+  color: #fff;
+}
+
+nav.scrolled .menu-container .menu-items .menu-button .bar {
   background-color: #000;
 }
 
-@media only screen and (max-width: 894px) {
+@media only screen and (max-width: 1000px) {
   nav .menu-container .menu-items {
     position: absolute;
     background: #fff;
@@ -293,14 +319,21 @@ nav.scrolled .menu-container .menu-button .bar {
             transform: translate(-50%, -50%);
   }
   nav .menu-container .menu-items ul li {
-    padding: 10px 0;
+    padding: 10px 15px;
     margin: 10px 0;
   }
   nav .menu-container .menu-items ul li a {
     color: #000;
   }
   nav .menu-container .menu-items ul li.active {
-    border-bottom: 2px solid #1b4658;
+    border-bottom: 1px solid #1b4658;
+  }
+  nav .menu-container .menu-items ul .login-bttn {
+    border: 1px solid #1b4658;
+    background-color: #1b4658;
+  }
+  nav .menu-container .menu-items ul .login-bttn a {
+    color: #fff;
   }
   nav .menu-container .menu-items.show {
     -webkit-transform: translateX(0%);
@@ -308,9 +341,9 @@ nav.scrolled .menu-container .menu-button .bar {
   }
 }
 
-@media only screen and (min-width: 895px) {
+@media only screen and (min-width: 1001px) {
   nav .menu-container .menu-items ul li {
-    padding: 5px 15px;
+    padding: 10px 20px;
     display: inline;
   }
   nav .menu-container .menu-items ul li a {

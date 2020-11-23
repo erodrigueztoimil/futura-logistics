@@ -36,7 +36,7 @@ nav {
   .menu-container {
     display: flex;
     align-items: center;
-    padding: 30px 10%;
+    padding: 30px 5%;
 
     .brand {
       display: flex;
@@ -74,6 +74,20 @@ nav {
           &:hover,
           &.active {
             border-bottom: 2px solid #fff;
+          }
+        }
+
+        .login-bttn {
+          border: 1px solid #fff;
+
+          &:hover,
+          &.active {
+            border: 1px solid #fff;
+            background-color: #fff;
+
+            a {
+              color: $blue;
+            }
           }
         }
       }
@@ -131,19 +145,33 @@ nav {
               border-bottom: 2px solid $blue;
             }
           }
-        }
-      }
 
-      .menu-button {
-        .bar {
-          background-color: #000;
+          .login-bttn {
+            border-color: #000;
+
+            &:hover,
+            &.active {
+              border: 1px solid $blue;
+              background-color: $blue;
+
+              a {
+                color: #fff;
+              }
+            }
+          }
+        }
+
+        .menu-button {
+          .bar {
+            background-color: #000;
+          }
         }
       }
     }
   }
 }
 
-@media only screen and (max-width: 894px) {
+@media only screen and (max-width: 1000px) {
   nav {
     .menu-container {
       .menu-items {
@@ -165,7 +193,7 @@ nav {
           transform: translate(-50%, -50%);
 
           li {
-            padding: 10px 0;
+            padding: 10px 15px;
             margin: 10px 0;
 
             a {
@@ -173,7 +201,16 @@ nav {
             }
 
             &.active {
-              border-bottom: 2px solid $blue;
+              border-bottom: 1px solid $blue;
+            }
+          }
+
+          .login-bttn {
+            border: 1px solid $blue;
+            background-color: $blue;
+
+            a {
+              color: #fff;
             }
           }
         }
@@ -186,13 +223,13 @@ nav {
   }
 }
 
-@media only screen and (min-width: 895px) {
+@media only screen and (min-width: 1001px) {
   nav {
     .menu-container {
       .menu-items {
         ul {
           li {
-            padding: 5px 15px;
+            padding: 10px 20px;
             display: inline;
 
             a {
@@ -208,6 +245,7 @@ nav {
     }
   }
 }
+
 // navigation section ends here
 
 #home {
