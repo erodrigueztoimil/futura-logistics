@@ -263,7 +263,7 @@ nav.scrolled {
 }
 
 nav.scrolled .menu-container h3 {
-  color: #000;
+  color: #1b4658;
 }
 
 nav.scrolled .menu-container .menu-items ul li a {
@@ -287,11 +287,17 @@ nav.scrolled .menu-container .menu-items ul .login-bttn:hover a, nav.scrolled .m
   color: #fff;
 }
 
-nav.scrolled .menu-container .menu-items .menu-button .bar {
+nav.scrolled .menu-container .menu-button .bar {
   background-color: #000;
 }
 
-@media only screen and (max-width: 1000px) {
+@media (max-width: 380px) {
+  .brand h3 {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 1040px) {
   nav .menu-container .menu-items {
     position: absolute;
     background: #fff;
@@ -333,7 +339,7 @@ nav.scrolled .menu-container .menu-items .menu-button .bar {
     background-color: #1b4658;
   }
   nav .menu-container .menu-items ul .login-bttn a {
-    color: #fff;
+    color: #fff !important;
   }
   nav .menu-container .menu-items.show {
     -webkit-transform: translateX(0%);
@@ -341,7 +347,7 @@ nav.scrolled .menu-container .menu-items .menu-button .bar {
   }
 }
 
-@media only screen and (min-width: 1001px) {
+@media only screen and (min-width: 1041px) {
   nav .menu-container .menu-items ul li {
     padding: 10px 20px;
     display: inline;

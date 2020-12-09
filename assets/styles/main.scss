@@ -130,7 +130,7 @@ nav {
 
     .menu-container {
       h3 {
-        color: #000;
+        color: $blue;
       }
 
       .menu-items {
@@ -160,18 +160,25 @@ nav {
             }
           }
         }
+      }
 
-        .menu-button {
-          .bar {
-            background-color: #000;
-          }
+      .menu-button {
+        .bar {
+          background-color: #000;
         }
       }
     }
   }
 }
 
-@media only screen and (max-width: 1000px) {
+// target company name font size for small mobile devices
+@media (max-width: 380px) {
+  .brand h3 {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 1040px) {
   nav {
     .menu-container {
       .menu-items {
@@ -210,7 +217,7 @@ nav {
             background-color: $blue;
 
             a {
-              color: #fff;
+              color: #fff !important;
             }
           }
         }
@@ -223,7 +230,7 @@ nav {
   }
 }
 
-@media only screen and (min-width: 1001px) {
+@media only screen and (min-width: 1041px) {
   nav {
     .menu-container {
       .menu-items {
