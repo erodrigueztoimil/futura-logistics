@@ -148,6 +148,11 @@ html p {
   line-height: 25px;
 }
 
+html .btn-primary {
+  background-color: #1b4658 !important;
+  border: none;
+}
+
 html.overflow {
   overflow: hidden;
 }

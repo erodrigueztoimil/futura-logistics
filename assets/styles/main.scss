@@ -21,6 +21,11 @@ html {
     line-height: 25px;
   }
 
+  .btn-primary {
+    background-color: $blue !important;
+    border: none;
+  }
+
   &.overflow {
     overflow: hidden;
   }
